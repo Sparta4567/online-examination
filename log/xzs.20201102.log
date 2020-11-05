@@ -1,0 +1,896 @@
+2020-11-02 14:42:38.979  INFO 2460 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on MSI with PID 2460 (started by MSI-PC in E:\学之思\xzs-mysql\source\xzs)
+2020-11-02 14:42:38.981  INFO 2460 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-11-02 14:42:39.271  INFO 2460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-02 14:42:39.271  INFO 2460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-02 14:42:47.236  INFO 2460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-02 14:42:47.243  INFO 2460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-02 14:42:47.610  INFO 2460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 0 repository interfaces.
+2020-11-02 14:42:49.545  INFO 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$c8883e4f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 14:42:49.562  INFO 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ef442e0e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 14:42:50.201  WARN 2460 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-02 14:42:50.247  INFO 2460 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-11-02 14:42:50.248  INFO 2460 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 10976 ms
+2020-11-02 14:42:55.980  INFO 2460 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40fbed94, org.springframework.security.web.context.SecurityContextPersistenceFilter@58ab6955, org.springframework.security.web.header.HeaderWriterFilter@70b9e333, org.springframework.web.filter.CorsFilter@5c2f7ac2, org.springframework.security.web.authentication.logout.LogoutFilter@33a8c569, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@1a62b421, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@75740ddb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3617a969, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44c5402c, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@56364eb0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@122dcb0, org.springframework.security.web.session.SessionManagementFilter@207bf47c, org.springframework.security.web.access.ExceptionTranslationFilter@2a8afcbe, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2dfecc57]
+2020-11-02 14:42:57.704  INFO 2460 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-11-02 14:42:57.706  INFO 2460 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-11-02 14:43:02.473  WARN 2460 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+2020-11-02 14:43:04.111  INFO 2460 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-02 14:43:04.143 ERROR 2460 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.mindskip.xzs.XzsApplication.main(XzsApplication.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:86)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1104)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1085)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:866)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:341)
+	at org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration$EnableRedisKeyspaceNotificationsInitializer.afterPropertiesSet(RedisHttpSessionConfiguration.java:302)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	... 21 common frames omitted
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:235)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:204)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:113)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:113)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$null$0(LettucePoolingConnectionProvider.java:74)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:209)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:199)
+	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:58)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:874)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:417)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:346)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:80)
+	... 28 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:670)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 12 common frames omitted
+
+2020-11-02 14:44:57.668  INFO 11872 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on MSI with PID 11872 (started by MSI-PC in E:\学之思\xzs-mysql\source\xzs)
+2020-11-02 14:44:57.671  INFO 11872 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-11-02 14:44:57.726  INFO 11872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-02 14:44:57.727  INFO 11872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-02 14:44:58.835  INFO 11872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-02 14:44:58.837  INFO 11872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-02 14:44:58.895  INFO 11872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 0 repository interfaces.
+2020-11-02 14:44:59.303  INFO 11872 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$fbc8ac8f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 14:44:59.310  INFO 11872 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$22849c4e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 14:44:59.609  WARN 11872 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-02 14:44:59.711  INFO 11872 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-11-02 14:44:59.712  INFO 11872 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1985 ms
+2020-11-02 14:45:01.307  INFO 11872 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c1e3a5a, org.springframework.security.web.context.SecurityContextPersistenceFilter@71143f2, org.springframework.security.web.header.HeaderWriterFilter@7e5a101c, org.springframework.web.filter.CorsFilter@331a72e7, org.springframework.security.web.authentication.logout.LogoutFilter@1600b73f, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@6ad947, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@788c1f8b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65063690, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7766ca00, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@359a73, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3462a7d, org.springframework.security.web.session.SessionManagementFilter@51466e4d, org.springframework.security.web.access.ExceptionTranslationFilter@44b6969a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17cd2747]
+2020-11-02 14:45:01.885  INFO 11872 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-11-02 14:45:01.887  INFO 11872 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-11-02 14:45:04.067  INFO 11872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 14:45:04.743  INFO 11872 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-11-02 14:45:04.883  INFO 11872 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2020-11-02 14:45:04.927  INFO 11872 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-11-02 14:45:05.041  INFO 11872 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-02 14:45:05.044 ERROR 11872 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8000 or configure this application to listen on another port.
+
+2020-11-02 14:45:31.171  INFO 9104 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on MSI with PID 9104 (started by MSI-PC in E:\学之思\xzs-mysql\source\xzs)
+2020-11-02 14:45:31.176  INFO 9104 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-11-02 14:45:31.239  INFO 9104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-02 14:45:31.243  INFO 9104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-02 14:45:32.326  INFO 9104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-02 14:45:32.328  INFO 9104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-02 14:45:32.379  INFO 9104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 repository interfaces.
+2020-11-02 14:45:32.812  INFO 9104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$f8418b50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 14:45:32.822  INFO 9104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1efd7b0f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 14:45:33.088  WARN 9104 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-02 14:45:33.106  INFO 9104 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-11-02 14:45:33.106  INFO 9104 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1862 ms
+2020-11-02 14:45:34.328  INFO 9104 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a12179c, org.springframework.security.web.context.SecurityContextPersistenceFilter@4faed60, org.springframework.security.web.header.HeaderWriterFilter@2eeae1b8, org.springframework.web.filter.CorsFilter@15a67d85, org.springframework.security.web.authentication.logout.LogoutFilter@353fcf7b, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@3f5d83a5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@18c696f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a76d277, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62bf8bae, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@66ba674b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1936bac9, org.springframework.security.web.session.SessionManagementFilter@16ea35cb, org.springframework.security.web.access.ExceptionTranslationFilter@54227817, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c96d624]
+2020-11-02 14:45:34.822  INFO 9104 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-11-02 14:45:34.823  INFO 9104 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-11-02 14:45:36.396  INFO 9104 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 14:45:37.015  INFO 9104 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-11-02 14:45:37.041  INFO 9104 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2020-11-02 14:45:37.049  INFO 9104 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-11-02 14:45:37.157  INFO 9104 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2020-11-02 14:45:37.180  INFO 9104 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 6.567 seconds (JVM running for 8.185)
+2020-11-02 14:45:46.483  INFO 9104 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-02 14:45:46.484  INFO 9104 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-02 14:45:46.506  INFO 9104 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2020-11-02 14:45:46.816  INFO 9104 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-02 14:45:47.421  INFO 9104 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-02 14:45:47.448 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.UserTokenMapper.getToken       : ==>  Preparing: select id, token, user_id, wx_open_id, create_time, end_time, user_name from t_user_token where token = ? order by id desc limit 1 
+2020-11-02 14:45:47.472 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.UserTokenMapper.getToken       : ==> Parameters: b47169e2-26d8-451c-8425-bd6c1dc5ca15(String)
+2020-11-02 14:45:47.635 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.UserTokenMapper.getToken       : <==      Total: 1
+2020-11-02 14:45:47.682 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2020-11-02 14:45:47.683 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2020-11-02 14:45:47.731 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2020-11-02 14:45:47.785 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==>  Preparing: update t_user SET user_uuid = ?, user_name = ?, password = ?, real_name = ?, age = ?, sex = ?, birth_day = ?, user_level = ?, phone = ?, role = ?, status = ?, image_path = ?, create_time = ?, modify_time = ?, deleted = ?, wx_open_id = ? where id = ? 
+2020-11-02 14:45:47.788 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==> Parameters: d2d29da2-dcb3-4013-b874-727626236f47(String), student(String), D1AGFL+Gx37t0NPG4d6biYP5Z31cNbwhK5w1lUeiHB2zagqbk8efYfSjYoh1Z/j1dkiRjHU+b0EpwzCh8IGsksJjzD65ci5LsnodQVf4Uj6D3pwoscXGqmkjjpzvSJbx42swwNTA+QoDU8YLo7JhtbUK2X0qCjFGpd+8eJ5BGvk=(String), 学生(String), 18(Integer), 1(Integer), 2019-09-01 16:00:00.0(Timestamp), 1(Integer), 158800882(String), 1(Integer), 1(Integer), http://image.alvisu.com/Fn4CyLHWvT-kxIrK1ZaqTDidvXzj(String), 2019-09-07 18:55:02.0(Timestamp), 2020-10-30 15:38:07.0(Timestamp), false(Boolean), o09fF5PVzrAItH0CbVz3lkLvAVzo(String), 1(Integer)
+2020-11-02 14:45:47.876 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.U.updateByPrimaryKeySelective  : <==    Updates: 1
+2020-11-02 14:45:47.884 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_token ( token, user_id, wx_open_id, create_time, end_time, user_name ) values ( ?, ?, ?, ?, ?, ? ) 
+2020-11-02 14:45:47.885 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.U.insertSelective              : ==> Parameters: 9a92f044-5dbb-4f56-a151-ad0bfec91611(String), 1(Integer), o09fF5PVzrAItH0CbVz3lkLvAVzo(String), 2020-11-02 14:45:47.736(Timestamp), 2020-11-03 02:45:47.736(Timestamp), student(String)
+2020-11-02 14:45:47.972 DEBUG 9104 --- [XNIO-1 task-1] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-11-02 14:45:48.217 DEBUG 9104 --- [XNIO-1 task-2] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2020-11-02 14:45:48.218 DEBUG 9104 --- [XNIO-1 task-2] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2020-11-02 14:45:48.220 DEBUG 9104 --- [XNIO-1 task-2] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2020-11-02 14:45:49.656 DEBUG 9104 --- [XNIO-1 task-3] r.c.m.x.r.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where id = ? 
+2020-11-02 14:45:49.657 DEBUG 9104 --- [XNIO-1 task-3] r.c.m.x.r.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Integer)
+2020-11-02 14:45:49.671 DEBUG 9104 --- [XNIO-1 task-3] r.c.m.x.r.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-11-02 14:45:49.673 DEBUG 9104 --- [XNIO-1 task-3] r.c.m.x.r.UserMapper.updateByPrimaryKey  : ==>  Preparing: update t_user set user_uuid = ?, user_name = ?, password = ?, real_name = ?, age = ?, sex = ?, birth_day = ?, user_level = ?, phone = ?, role = ?, status = ?, image_path = ?, create_time = ?, modify_time = ?, last_active_time = ?, deleted = ?, wx_open_id = ? where id = ? 
+2020-11-02 14:45:49.674 DEBUG 9104 --- [XNIO-1 task-3] r.c.m.x.r.UserMapper.updateByPrimaryKey  : ==> Parameters: d2d29da2-dcb3-4013-b874-727626236f47(String), student(String), D1AGFL+Gx37t0NPG4d6biYP5Z31cNbwhK5w1lUeiHB2zagqbk8efYfSjYoh1Z/j1dkiRjHU+b0EpwzCh8IGsksJjzD65ci5LsnodQVf4Uj6D3pwoscXGqmkjjpzvSJbx42swwNTA+QoDU8YLo7JhtbUK2X0qCjFGpd+8eJ5BGvk=(String), 学生(String), 18(Integer), 1(Integer), 2019-09-01 16:00:00.0(Timestamp), 1(Integer), 158800882(String), 1(Integer), 1(Integer), http://image.alvisu.com/Fn4CyLHWvT-kxIrK1ZaqTDidvXzj(String), 2019-09-07 18:55:02.0(Timestamp), 2020-11-02 14:45:49.671(Timestamp), null, false(Boolean), null, 1(Integer)
+2020-11-02 14:45:49.693 DEBUG 9104 --- [XNIO-1 task-3] r.c.m.x.r.UserMapper.updateByPrimaryKey  : <==    Updates: 1
+2020-11-02 14:45:49.695 DEBUG 9104 --- [XNIO-1 task-3] r.c.m.x.r.U.deleteByPrimaryKey           : ==>  Preparing: delete from t_user_token where id = ? 
+2020-11-02 14:45:49.695 DEBUG 9104 --- [XNIO-1 task-3] r.c.m.x.r.U.deleteByPrimaryKey           : ==> Parameters: 22(Integer)
+2020-11-02 14:45:49.696 DEBUG 9104 --- [XNIO-1 task-3] r.c.m.x.r.U.deleteByPrimaryKey           : <==    Updates: 1
+2020-11-02 14:46:00.052 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2020-11-02 14:46:00.053 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2020-11-02 14:46:00.055 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2020-11-02 14:46:02.230 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==>  Preparing: update t_user SET user_uuid = ?, user_name = ?, password = ?, real_name = ?, age = ?, sex = ?, birth_day = ?, user_level = ?, phone = ?, role = ?, status = ?, image_path = ?, create_time = ?, modify_time = ?, deleted = ?, wx_open_id = ? where id = ? 
+2020-11-02 14:46:02.231 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==> Parameters: d2d29da2-dcb3-4013-b874-727626236f47(String), student(String), D1AGFL+Gx37t0NPG4d6biYP5Z31cNbwhK5w1lUeiHB2zagqbk8efYfSjYoh1Z/j1dkiRjHU+b0EpwzCh8IGsksJjzD65ci5LsnodQVf4Uj6D3pwoscXGqmkjjpzvSJbx42swwNTA+QoDU8YLo7JhtbUK2X0qCjFGpd+8eJ5BGvk=(String), 学生(String), 18(Integer), 1(Integer), 2019-09-01 16:00:00.0(Timestamp), 1(Integer), 158800882(String), 1(Integer), 1(Integer), http://image.alvisu.com/Fn4CyLHWvT-kxIrK1ZaqTDidvXzj(String), 2019-09-07 18:55:02.0(Timestamp), 2020-11-02 14:46:02.228(Timestamp), false(Boolean), o09fF5PVzrAItH0CbVz3lkLvAVzo(String), 1(Integer)
+2020-11-02 14:46:02.232 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.U.updateByPrimaryKeySelective  : <==    Updates: 1
+2020-11-02 14:46:02.235 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==>  Preparing: update t_user SET user_uuid = ?, user_name = ?, password = ?, real_name = ?, age = ?, sex = ?, birth_day = ?, user_level = ?, phone = ?, role = ?, status = ?, image_path = ?, create_time = ?, modify_time = ?, deleted = ?, wx_open_id = ? where id = ? 
+2020-11-02 14:46:02.238 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==> Parameters: d2d29da2-dcb3-4013-b874-727626236f47(String), student(String), D1AGFL+Gx37t0NPG4d6biYP5Z31cNbwhK5w1lUeiHB2zagqbk8efYfSjYoh1Z/j1dkiRjHU+b0EpwzCh8IGsksJjzD65ci5LsnodQVf4Uj6D3pwoscXGqmkjjpzvSJbx42swwNTA+QoDU8YLo7JhtbUK2X0qCjFGpd+8eJ5BGvk=(String), 学生(String), 18(Integer), 1(Integer), 2019-09-01 16:00:00.0(Timestamp), 1(Integer), 158800882(String), 1(Integer), 1(Integer), http://image.alvisu.com/Fn4CyLHWvT-kxIrK1ZaqTDidvXzj(String), 2019-09-07 18:55:02.0(Timestamp), 2020-11-02 14:46:02.228(Timestamp), false(Boolean), o09fF5PVzrAItH0CbVz3lkLvAVzo(String), 1(Integer)
+2020-11-02 14:46:02.240 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.U.updateByPrimaryKeySelective  : <==    Updates: 1
+2020-11-02 14:46:02.242 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_token ( token, user_id, wx_open_id, create_time, end_time, user_name ) values ( ?, ?, ?, ?, ?, ? ) 
+2020-11-02 14:46:02.243 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.U.insertSelective              : ==> Parameters: 6da5cb9c-1a89-4d8e-8083-616dae94f752(String), 1(Integer), o09fF5PVzrAItH0CbVz3lkLvAVzo(String), 2020-11-02 14:46:02.234(Timestamp), 2020-11-03 02:46:02.234(Timestamp), student(String)
+2020-11-02 14:46:02.244 DEBUG 9104 --- [XNIO-1 task-4] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-11-02 14:46:02.557 DEBUG 9104 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2020-11-02 14:46:02.557 DEBUG 9104 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2020-11-02 14:46:02.558 DEBUG 9104 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2020-11-02 14:46:02.567 DEBUG 9104 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 14:46:02.567 DEBUG 9104 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 14:46:02.625 DEBUG 9104 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 14:46:02.628 DEBUG 9104 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 14:46:02.629 DEBUG 9104 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 14:46:02.626(Timestamp)
+2020-11-02 14:46:02.643 DEBUG 9104 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 14:46:02.921 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 14:46:02.922 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 14:46:02.972 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 14:46:02.977 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 14:46:02.977 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 14:46:03.024 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 14:46:03.030 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-11-02 14:46:03.031 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 15(Integer)
+2020-11-02 14:46:03.084 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 14:46:03.129 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-11-02 14:46:03.129 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 16(Integer)
+2020-11-02 14:46:03.130 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 14:46:03.136 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-11-02 14:46:03.138 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 20(Integer)
+2020-11-02 14:46:03.140 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 14:46:03.144 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-11-02 14:46:03.144 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 21(Integer)
+2020-11-02 14:46:03.145 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 14:46:03.149 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-11-02 14:46:03.149 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 24(Integer)
+2020-11-02 14:46:03.150 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 14:46:03.153 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-11-02 14:46:03.154 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 25(Integer)
+2020-11-02 14:46:03.156 DEBUG 9104 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 14:52:38.404 DEBUG 9104 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 14:52:38.404 DEBUG 9104 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 14:52:38.453 DEBUG 9104 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 14:52:38.454 DEBUG 9104 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 14:52:38.455 DEBUG 9104 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 14:52:38.454(Timestamp)
+2020-11-02 14:52:38.457 DEBUG 9104 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 14:52:38.489 DEBUG 9104 --- [XNIO-1 task-8] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 14:52:38.490 DEBUG 9104 --- [XNIO-1 task-8] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 14:52:38.491 DEBUG 9104 --- [XNIO-1 task-8] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 14:52:38.492 DEBUG 9104 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 14:52:38.492 DEBUG 9104 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 14:52:38.493 DEBUG 9104 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 14:54:07.230 DEBUG 9104 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 14:54:07.230 DEBUG 9104 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 14:54:07.231 DEBUG 9104 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 14:54:07.234 DEBUG 9104 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 14:54:07.235 DEBUG 9104 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 14:54:07.233(Timestamp)
+2020-11-02 14:54:07.236 DEBUG 9104 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 14:54:07.627 DEBUG 9104 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 14:54:07.628 DEBUG 9104 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 14:54:07.635 DEBUG 9104 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 14:54:07.636 DEBUG 9104 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 14:54:07.637 DEBUG 9104 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 14:54:07.638 DEBUG 9104 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 15:18:51.986  INFO 10328 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on MSI with PID 10328 (started by MSI-PC in E:\学之思\xzs-mysql\source\xzs)
+2020-11-02 15:18:51.988  INFO 10328 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-11-02 15:18:52.081  INFO 10328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-02 15:18:52.081  INFO 10328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-02 15:18:53.140  INFO 10328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-02 15:18:53.144  INFO 10328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-02 15:18:53.192  INFO 10328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 repository interfaces.
+2020-11-02 15:18:53.604  INFO 10328 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$a8aac4b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 15:18:53.615  INFO 10328 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cf66b474] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 15:18:53.896  WARN 10328 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-02 15:18:53.919  INFO 10328 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-11-02 15:18:53.919  INFO 10328 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1837 ms
+2020-11-02 15:18:55.218  INFO 10328 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34a04834, org.springframework.security.web.context.SecurityContextPersistenceFilter@79030568, org.springframework.security.web.header.HeaderWriterFilter@69260b1e, org.springframework.web.filter.CorsFilter@1c257b57, org.springframework.security.web.authentication.logout.LogoutFilter@35ce22f1, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@3832ca42, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@340f9d71, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2063c1f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34db625e, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@37f6ee01, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48a01416, org.springframework.security.web.session.SessionManagementFilter@67ed2547, org.springframework.security.web.access.ExceptionTranslationFilter@53346825, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58845020]
+2020-11-02 15:18:55.728  INFO 10328 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-11-02 15:18:55.731  INFO 10328 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-11-02 15:18:57.439  INFO 10328 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 15:18:58.066  INFO 10328 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-11-02 15:18:58.091  INFO 10328 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2020-11-02 15:18:58.101  INFO 10328 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-11-02 15:18:58.159  INFO 10328 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 80 (http) with context path ''
+2020-11-02 15:18:58.165  INFO 10328 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 6.772 seconds (JVM running for 8.514)
+2020-11-02 16:23:20.602  INFO 10328 --- [XNIO-1 task-2] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-02 16:23:20.608  INFO 10328 --- [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-02 16:23:20.671  INFO 10328 --- [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 62 ms
+2020-11-02 16:23:24.051  INFO 10328 --- [XNIO-1 task-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-02 16:23:24.530  INFO 10328 --- [XNIO-1 task-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-02 16:23:24.560 DEBUG 10328 --- [XNIO-1 task-2] r.c.m.x.r.UserMapper.selectByWxOpenId    : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and wx_open_id = ? limit 1 
+2020-11-02 16:23:24.601 DEBUG 10328 --- [XNIO-1 task-2] r.c.m.x.r.UserMapper.selectByWxOpenId    : ==> Parameters: o09fF5PVzrAItH0CbVz3lkLvAVzo(String)
+2020-11-02 16:23:24.688 DEBUG 10328 --- [XNIO-1 task-2] r.c.m.x.r.UserMapper.selectByWxOpenId    : <==      Total: 1
+2020-11-02 16:23:24.865 DEBUG 10328 --- [XNIO-1 task-2] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==>  Preparing: update t_user SET user_uuid = ?, user_name = ?, password = ?, real_name = ?, age = ?, sex = ?, birth_day = ?, user_level = ?, phone = ?, role = ?, status = ?, image_path = ?, create_time = ?, modify_time = ?, deleted = ?, wx_open_id = ? where id = ? 
+2020-11-02 16:23:24.890 DEBUG 10328 --- [XNIO-1 task-2] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==> Parameters: d2d29da2-dcb3-4013-b874-727626236f47(String), student(String), D1AGFL+Gx37t0NPG4d6biYP5Z31cNbwhK5w1lUeiHB2zagqbk8efYfSjYoh1Z/j1dkiRjHU+b0EpwzCh8IGsksJjzD65ci5LsnodQVf4Uj6D3pwoscXGqmkjjpzvSJbx42swwNTA+QoDU8YLo7JhtbUK2X0qCjFGpd+8eJ5BGvk=(String), 学生(String), 18(Integer), 1(Integer), 2019-09-01 16:00:00.0(Timestamp), 1(Integer), 158800882(String), 1(Integer), 1(Integer), http://image.alvisu.com/Fn4CyLHWvT-kxIrK1ZaqTDidvXzj(String), 2019-09-07 18:55:02.0(Timestamp), 2020-11-02 14:46:02.0(Timestamp), false(Boolean), o09fF5PVzrAItH0CbVz3lkLvAVzo(String), 1(Integer)
+2020-11-02 16:23:24.971 DEBUG 10328 --- [XNIO-1 task-2] r.c.m.x.r.U.updateByPrimaryKeySelective  : <==    Updates: 1
+2020-11-02 16:23:25.003 DEBUG 10328 --- [XNIO-1 task-2] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_token ( token, user_id, wx_open_id, create_time, end_time, user_name ) values ( ?, ?, ?, ?, ?, ? ) 
+2020-11-02 16:23:25.005 DEBUG 10328 --- [XNIO-1 task-2] r.c.m.x.r.U.insertSelective              : ==> Parameters: b0ea199e-cc98-451a-a7b7-884d1641ecd4(String), 1(Integer), o09fF5PVzrAItH0CbVz3lkLvAVzo(String), 2020-11-02 16:23:24.7(Timestamp), 2020-11-03 04:23:24.7(Timestamp), student(String)
+2020-11-02 16:23:25.053 DEBUG 10328 --- [XNIO-1 task-2] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-11-02 16:23:26.232 DEBUG 10328 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2020-11-02 16:23:26.233 DEBUG 10328 --- [XNIO-1 task-4] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2020-11-02 16:23:26.233 DEBUG 10328 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2020-11-02 16:23:26.236 DEBUG 10328 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2020-11-02 16:23:26.238 DEBUG 10328 --- [XNIO-1 task-4] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2020-11-02 16:23:26.241 DEBUG 10328 --- [XNIO-1 task-4] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2020-11-02 16:23:26.290 DEBUG 10328 --- [XNIO-1 task-5] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 16:23:26.291 DEBUG 10328 --- [XNIO-1 task-5] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 16:23:26.292 DEBUG 10328 --- [XNIO-1 task-5] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 16:23:26.312 DEBUG 10328 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 16:23:26.312 DEBUG 10328 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 16:23:26.312 DEBUG 10328 --- [XNIO-1 task-5] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 16:23:26.313 DEBUG 10328 --- [XNIO-1 task-5] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 16:23:26.316 DEBUG 10328 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 16:23:26.317 DEBUG 10328 --- [XNIO-1 task-5] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 16:23:26.317 DEBUG 10328 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 16:23:26.318 DEBUG 10328 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 16:23:26.317(Timestamp)
+2020-11-02 16:23:26.319 DEBUG 10328 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 16:45:18.802 DEBUG 10328 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 16:45:18.803 DEBUG 10328 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 16:45:18.806 DEBUG 10328 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 16:45:18.809 DEBUG 10328 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 16:45:18.811 DEBUG 10328 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 16:45:18.808(Timestamp)
+2020-11-02 16:45:18.812 DEBUG 10328 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 16:45:18.880 DEBUG 10328 --- [XNIO-1 task-7] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 16:45:18.881 DEBUG 10328 --- [XNIO-1 task-7] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 16:45:18.882 DEBUG 10328 --- [XNIO-1 task-7] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 16:45:18.884 DEBUG 10328 --- [XNIO-1 task-7] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 16:45:18.885 DEBUG 10328 --- [XNIO-1 task-7] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 16:45:18.889 DEBUG 10328 --- [XNIO-1 task-7] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 16:47:38.905 DEBUG 10328 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 16:47:38.906 DEBUG 10328 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 16:47:38.907 DEBUG 10328 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 16:47:38.908 DEBUG 10328 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 16:47:38.909 DEBUG 10328 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 16:47:38.907(Timestamp)
+2020-11-02 16:47:38.911 DEBUG 10328 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 16:47:38.972 DEBUG 10328 --- [XNIO-1 task-9] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 16:47:38.972 DEBUG 10328 --- [XNIO-1 task-9] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 16:47:38.985 DEBUG 10328 --- [XNIO-1 task-9] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 16:47:38.991 DEBUG 10328 --- [XNIO-1 task-9] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 16:47:38.992 DEBUG 10328 --- [XNIO-1 task-9] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 16:47:38.993 DEBUG 10328 --- [XNIO-1 task-9] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 16:52:28.801  INFO 21120 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on MSI with PID 21120 (started by MSI-PC in E:\学之思\xzs-mysql\source\xzs)
+2020-11-02 16:52:28.802  INFO 21120 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-11-02 16:52:28.901  INFO 21120 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-02 16:52:28.901  INFO 21120 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-02 16:52:31.319  INFO 21120 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-02 16:52:31.322  INFO 21120 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-02 16:52:31.399  INFO 21120 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42ms. Found 0 repository interfaces.
+2020-11-02 16:52:31.900  INFO 21120 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$380ee824] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 16:52:31.908  INFO 21120 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ecad7e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 16:52:32.284  WARN 21120 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-02 16:52:32.317  INFO 21120 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-11-02 16:52:32.318  INFO 21120 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3417 ms
+2020-11-02 16:52:34.307  INFO 21120 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@632b2c00, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e1ff185, org.springframework.security.web.header.HeaderWriterFilter@1e18220b, org.springframework.web.filter.CorsFilter@6051871a, org.springframework.security.web.authentication.logout.LogoutFilter@608cd47e, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@2c80b962, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4c1509f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49220e6e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@197c6136, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@5f82a55e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a20500, org.springframework.security.web.session.SessionManagementFilter@1ab66597, org.springframework.security.web.access.ExceptionTranslationFilter@66d8a835, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56fa1d61]
+2020-11-02 16:52:35.089  INFO 21120 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-11-02 16:52:35.090  INFO 21120 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-11-02 16:52:36.729  INFO 21120 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 16:52:37.363  INFO 21120 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-11-02 16:52:37.388  INFO 21120 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2020-11-02 16:52:37.396  INFO 21120 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-11-02 16:52:37.498  INFO 21120 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 80 (http) with context path ''
+2020-11-02 16:52:37.502  INFO 21120 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 9.822 seconds (JVM running for 12.709)
+2020-11-02 16:54:02.692  INFO 21120 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-02 16:54:02.693  INFO 21120 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-02 16:54:02.708  INFO 21120 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-11-02 16:54:02.820  INFO 21120 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-02 16:54:03.020  INFO 21120 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-02 16:54:03.029 DEBUG 21120 --- [XNIO-1 task-1] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 16:54:03.056 DEBUG 21120 --- [XNIO-1 task-1] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 16:54:03.057 DEBUG 21120 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 16:54:03.058 DEBUG 21120 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 16:54:03.079 DEBUG 21120 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 16:54:03.083 DEBUG 21120 --- [XNIO-1 task-1] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 16:54:03.083 DEBUG 21120 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 16:54:03.085 DEBUG 21120 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 16:54:03.083(Timestamp)
+2020-11-02 16:54:03.086 DEBUG 21120 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 16:54:03.087 DEBUG 21120 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 16:54:03.089 DEBUG 21120 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 16:54:03.091 DEBUG 21120 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 17:03:17.712 DEBUG 21120 --- [XNIO-1 task-3] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 17:03:17.713 DEBUG 21120 --- [XNIO-1 task-3] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 17:03:17.714 DEBUG 21120 --- [XNIO-1 task-4] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 17:03:17.714 DEBUG 21120 --- [XNIO-1 task-4] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 17:03:17.715 DEBUG 21120 --- [XNIO-1 task-3] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 17:03:17.716 DEBUG 21120 --- [XNIO-1 task-3] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 17:03:17.716 DEBUG 21120 --- [XNIO-1 task-4] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 17:03:17.718 DEBUG 21120 --- [XNIO-1 task-3] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 17:03:17.715(Timestamp)
+2020-11-02 17:03:17.718 DEBUG 21120 --- [XNIO-1 task-4] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 17:03:17.720 DEBUG 21120 --- [XNIO-1 task-4] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 17:03:17.721 DEBUG 21120 --- [XNIO-1 task-3] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 17:03:17.722 DEBUG 21120 --- [XNIO-1 task-4] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 17:03:25.538 DEBUG 21120 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 17:03:25.538 DEBUG 21120 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 17:03:25.541 DEBUG 21120 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 17:03:25.542 DEBUG 21120 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 17:03:25.543 DEBUG 21120 --- [XNIO-1 task-6] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 17:03:25.544 DEBUG 21120 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 17:03:25.542(Timestamp)
+2020-11-02 17:03:25.544 DEBUG 21120 --- [XNIO-1 task-6] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 17:03:25.545 DEBUG 21120 --- [XNIO-1 task-5] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 17:03:25.545 DEBUG 21120 --- [XNIO-1 task-6] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 17:03:25.550 DEBUG 21120 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 17:03:25.550 DEBUG 21120 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 17:03:25.553 DEBUG 21120 --- [XNIO-1 task-6] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 17:10:50.329 ERROR 21120 --- [XNIO-1 task-7] c.m.x.c.s.exception.ExceptionHandle      : Request method 'GET' not supported
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:200)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:419)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:365)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:65)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:401)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1232)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1015)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:150)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:151)
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:85)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2020-11-02 17:15:32.558 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id from t_exam_paper_answer where id = ? 
+2020-11-02 17:15:32.559 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 14(Integer)
+2020-11-02 17:15:32.679 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 17:15:32.680 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2020-11-02 17:15:32.681 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 10(Integer)
+2020-11-02 17:15:32.683 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 17:15:32.690 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-11-02 17:15:32.690 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 23(Integer)
+2020-11-02 17:15:32.707 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 17:15:32.791 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? , ? ) 
+2020-11-02 17:15:32.793 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 2(Integer), 5(Integer)
+2020-11-02 17:15:32.845 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 2
+2020-11-02 17:15:32.853 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-11-02 17:15:32.854 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 6(Integer)
+2020-11-02 17:15:32.856 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 17:15:33.049 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-11-02 17:15:33.049 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 22(Integer)
+2020-11-02 17:15:33.062 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 17:15:33.067 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id from t_exam_paper_answer where id = ? 
+2020-11-02 17:15:33.067 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 14(Integer)
+2020-11-02 17:15:33.069 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 17:15:33.069 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectListByPaperAnswerId    : ==>  Preparing: select id, question_id, exam_paper_id, exam_paper_answer_id, question_type, subject_id, customer_score, question_score, question_text_content_id, answer, text_content_id, do_right, create_user, create_time, item_order from t_exam_paper_question_customer_answer where exam_paper_answer_id = ? order by item_order 
+2020-11-02 17:15:33.070 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectListByPaperAnswerId    : ==> Parameters: 14(Integer)
+2020-11-02 17:15:33.182 DEBUG 21120 --- [XNIO-1 task-8] r.c.m.x.r.E.selectListByPaperAnswerId    : <==      Total: 2
+2020-11-02 17:17:04.650 DEBUG 21120 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 17:17:04.651 DEBUG 21120 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 17:17:04.654 DEBUG 21120 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 17:17:04.656 DEBUG 21120 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 17:17:04.656 DEBUG 21120 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 17:17:04.655(Timestamp)
+2020-11-02 17:17:04.658 DEBUG 21120 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 17:17:04.694 DEBUG 21120 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 17:17:04.694 DEBUG 21120 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 17:17:04.696 DEBUG 21120 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 17:17:04.697 DEBUG 21120 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 17:17:04.697 DEBUG 21120 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 17:17:04.698 DEBUG 21120 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 17:21:41.176 DEBUG 21120 --- [XNIO-1 task-11] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 17:21:41.177 DEBUG 21120 --- [XNIO-1 task-11] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 17:21:41.178 DEBUG 21120 --- [XNIO-1 task-11] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 17:21:41.179 DEBUG 21120 --- [XNIO-1 task-11] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 17:21:41.180 DEBUG 21120 --- [XNIO-1 task-11] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 17:21:41.179(Timestamp)
+2020-11-02 17:21:41.180 DEBUG 21120 --- [XNIO-1 task-11] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 17:21:41.226 DEBUG 21120 --- [XNIO-1 task-12] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 17:21:41.227 DEBUG 21120 --- [XNIO-1 task-12] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 17:21:41.229 DEBUG 21120 --- [XNIO-1 task-12] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 17:21:41.230 DEBUG 21120 --- [XNIO-1 task-12] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 17:21:41.230 DEBUG 21120 --- [XNIO-1 task-12] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 17:21:41.231 DEBUG 21120 --- [XNIO-1 task-12] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 17:31:13.174 DEBUG 21120 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 17:31:13.175 DEBUG 21120 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 17:31:13.176 DEBUG 21120 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 17:31:13.177 DEBUG 21120 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 17:31:13.178 DEBUG 21120 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 17:31:13.177(Timestamp)
+2020-11-02 17:31:13.179 DEBUG 21120 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 17:31:13.237 DEBUG 21120 --- [XNIO-1 task-14] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 17:31:13.237 DEBUG 21120 --- [XNIO-1 task-14] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 17:31:13.241 DEBUG 21120 --- [XNIO-1 task-14] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 17:31:13.241 DEBUG 21120 --- [XNIO-1 task-14] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 17:31:13.242 DEBUG 21120 --- [XNIO-1 task-14] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 17:31:13.244 DEBUG 21120 --- [XNIO-1 task-14] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 17:37:52.697 DEBUG 21120 --- [XNIO-1 task-15] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 17:37:52.698 DEBUG 21120 --- [XNIO-1 task-15] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 17:37:52.699 DEBUG 21120 --- [XNIO-1 task-15] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 17:37:52.700 DEBUG 21120 --- [XNIO-1 task-15] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 17:37:52.701 DEBUG 21120 --- [XNIO-1 task-15] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 17:37:52.7(Timestamp)
+2020-11-02 17:37:52.704 DEBUG 21120 --- [XNIO-1 task-15] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 17:37:52.745 DEBUG 21120 --- [XNIO-1 task-16] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 17:37:52.746 DEBUG 21120 --- [XNIO-1 task-16] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 17:37:52.747 DEBUG 21120 --- [XNIO-1 task-16] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 17:37:52.748 DEBUG 21120 --- [XNIO-1 task-16] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 17:37:52.748 DEBUG 21120 --- [XNIO-1 task-16] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 17:37:52.749 DEBUG 21120 --- [XNIO-1 task-16] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 17:51:40.216  INFO 23340 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on MSI with PID 23340 (started by MSI-PC in E:\学之思\xzs-mysql\source\xzs)
+2020-11-02 17:51:40.218  INFO 23340 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-11-02 17:51:40.291  INFO 23340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-02 17:51:40.291  INFO 23340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-02 17:51:42.698  INFO 23340 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-02 17:51:42.701  INFO 23340 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-02 17:51:42.787  INFO 23340 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2020-11-02 17:51:43.203  INFO 23340 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$ccf1082] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 17:51:43.212  INFO 23340 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$338b0041] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 17:51:43.555  WARN 23340 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-02 17:51:43.615  INFO 23340 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-11-02 17:51:43.616  INFO 23340 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3324 ms
+2020-11-02 17:51:45.349  INFO 23340 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@238b71cf, org.springframework.security.web.context.SecurityContextPersistenceFilter@5aa2c4a5, org.springframework.security.web.header.HeaderWriterFilter@268ce7f5, org.springframework.web.filter.CorsFilter@edadd59, org.springframework.security.web.authentication.logout.LogoutFilter@184b4008, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@36bd7500, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@775fc814, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62cec2fe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45cc1bad, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@6857b776, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c585aaa, org.springframework.security.web.session.SessionManagementFilter@2f1f6eaf, org.springframework.security.web.access.ExceptionTranslationFilter@70d5241c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6df5fae2]
+2020-11-02 17:51:46.013  INFO 23340 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-11-02 17:51:46.014  INFO 23340 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-11-02 17:51:47.607  INFO 23340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 17:51:48.248  INFO 23340 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-11-02 17:51:48.277  INFO 23340 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2020-11-02 17:51:48.283  INFO 23340 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-11-02 17:51:48.350  INFO 23340 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 80 (http) with context path ''
+2020-11-02 17:51:48.354  INFO 23340 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 9.67 seconds (JVM running for 13.102)
+2020-11-02 17:52:28.908  INFO 23340 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-02 17:52:28.912  INFO 23340 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-02 17:52:28.927  INFO 23340 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-11-02 17:52:29.184  INFO 23340 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-02 17:52:29.458  INFO 23340 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-02 17:52:29.466 DEBUG 23340 --- [XNIO-1 task-1] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2020-11-02 17:52:29.495 DEBUG 23340 --- [XNIO-1 task-1] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 3(Integer)
+2020-11-02 17:52:29.524 DEBUG 23340 --- [XNIO-1 task-1] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 17:52:29.571 DEBUG 23340 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-11-02 17:52:29.571 DEBUG 23340 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 7(Integer)
+2020-11-02 17:52:29.574 DEBUG 23340 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 17:52:29.735 DEBUG 23340 --- [XNIO-1 task-1] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? ) 
+2020-11-02 17:52:29.736 DEBUG 23340 --- [XNIO-1 task-1] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 2(Integer)
+2020-11-02 17:52:29.737 DEBUG 23340 --- [XNIO-1 task-1] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 1
+2020-11-02 17:54:35.848 DEBUG 23340 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 17:54:35.848 DEBUG 23340 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 17:54:35.850 DEBUG 23340 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 17:54:35.852 DEBUG 23340 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 17:54:35.856 DEBUG 23340 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 17:54:35.851(Timestamp)
+2020-11-02 17:54:35.857 DEBUG 23340 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 17:54:35.874 DEBUG 23340 --- [XNIO-1 task-3] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 17:54:35.875 DEBUG 23340 --- [XNIO-1 task-3] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 17:54:35.876 DEBUG 23340 --- [XNIO-1 task-3] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 17:54:35.879 DEBUG 23340 --- [XNIO-1 task-3] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 17:54:35.879 DEBUG 23340 --- [XNIO-1 task-3] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 17:54:35.881 DEBUG 23340 --- [XNIO-1 task-3] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 17:57:30.041 DEBUG 23340 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 17:57:30.041 DEBUG 23340 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 17:57:30.042 DEBUG 23340 --- [XNIO-1 task-5] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 17:57:30.043 DEBUG 23340 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 17:57:30.043 DEBUG 23340 --- [XNIO-1 task-5] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 17:57:30.044 DEBUG 23340 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 17:57:30.045 DEBUG 23340 --- [XNIO-1 task-5] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 17:57:30.045 DEBUG 23340 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 17:57:30.043(Timestamp)
+2020-11-02 17:57:30.046 DEBUG 23340 --- [XNIO-1 task-5] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 17:57:30.046 DEBUG 23340 --- [XNIO-1 task-4] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 17:57:30.047 DEBUG 23340 --- [XNIO-1 task-5] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 17:57:30.048 DEBUG 23340 --- [XNIO-1 task-5] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 19:20:37.561  INFO 14292 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on MSI with PID 14292 (started by MSI-PC in E:\学之思\xzs-mysql\source\xzs)
+2020-11-02 19:20:37.563  INFO 14292 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-11-02 19:20:38.236  INFO 14292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-02 19:20:38.237  INFO 14292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-02 19:20:53.686  INFO 14292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-02 19:20:53.720  INFO 14292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-02 19:20:53.992  INFO 14292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 0 repository interfaces.
+2020-11-02 19:20:54.826  INFO 14292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$a1c7d40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 19:20:54.835  INFO 14292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$30d86cff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 19:20:55.782  WARN 14292 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-02 19:20:55.870  INFO 14292 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-11-02 19:20:55.871  INFO 14292 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 17633 ms
+2020-11-02 19:20:58.977  INFO 14292 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@688abcbe, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f09c16c, org.springframework.security.web.header.HeaderWriterFilter@4ba1bd9c, org.springframework.web.filter.CorsFilter@11c7b509, org.springframework.security.web.authentication.logout.LogoutFilter@1ce8df09, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@45880cb3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e18d703, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e1613bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@642a130e, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@2f6e95fb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19d53fdc, org.springframework.security.web.session.SessionManagementFilter@58d356c8, org.springframework.security.web.access.ExceptionTranslationFilter@4e39201b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5530e91e]
+2020-11-02 19:21:00.260  INFO 14292 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-11-02 19:21:00.261  INFO 14292 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-11-02 19:21:03.874  WARN 14292 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+2020-11-02 19:21:05.044  INFO 14292 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-02 19:21:05.121 ERROR 14292 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.mindskip.xzs.XzsApplication.main(XzsApplication.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:86)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1104)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1085)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:866)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:341)
+	at org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration$EnableRedisKeyspaceNotificationsInitializer.afterPropertiesSet(RedisHttpSessionConfiguration.java:302)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	... 21 common frames omitted
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:235)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:204)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:113)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:113)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$null$0(LettucePoolingConnectionProvider.java:74)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:209)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:199)
+	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:58)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:874)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:417)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:346)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:80)
+	... 28 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:670)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 12 common frames omitted
+
+2020-11-02 19:23:04.753  INFO 8960 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on MSI with PID 8960 (started by MSI-PC in E:\学之思\xzs-mysql\source\xzs)
+2020-11-02 19:23:04.755  INFO 8960 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-11-02 19:23:04.811  INFO 8960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-02 19:23:04.811  INFO 8960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-02 19:23:05.802  INFO 8960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-02 19:23:05.804  INFO 8960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-02 19:23:05.856  INFO 8960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 repository interfaces.
+2020-11-02 19:23:06.265  INFO 8960 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$76d8fe12] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 19:23:06.272  INFO 8960 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9d94edd1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 19:23:06.534  WARN 8960 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-02 19:23:06.561  INFO 8960 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-11-02 19:23:06.561  INFO 8960 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1750 ms
+2020-11-02 19:23:07.755  INFO 8960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7caa4f5d, org.springframework.security.web.context.SecurityContextPersistenceFilter@5987f946, org.springframework.security.web.header.HeaderWriterFilter@39843149, org.springframework.web.filter.CorsFilter@e6da8d6, org.springframework.security.web.authentication.logout.LogoutFilter@2ce37f22, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@1e880982, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@64fc4e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5868e5ec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e61fc44, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@35ad4d4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c4789ca, org.springframework.security.web.session.SessionManagementFilter@61b76adb, org.springframework.security.web.access.ExceptionTranslationFilter@3ef0c5e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5ac1c249]
+2020-11-02 19:23:08.217  INFO 8960 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-11-02 19:23:08.219  INFO 8960 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-11-02 19:23:10.374  INFO 8960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 19:23:10.987  INFO 8960 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-11-02 19:23:11.175  INFO 8960 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2020-11-02 19:23:11.259  INFO 8960 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-11-02 19:23:11.376  INFO 8960 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 80 (http) with context path ''
+2020-11-02 19:23:11.383  INFO 8960 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 7.138 seconds (JVM running for 8.661)
+2020-11-02 19:24:31.857  INFO 8960 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-02 19:24:31.858  INFO 8960 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-02 19:24:31.882  INFO 8960 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2020-11-02 19:24:32.182  INFO 8960 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-02 19:24:32.564  INFO 8960 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-02 19:24:32.572 DEBUG 8960 --- [XNIO-1 task-1] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 19:24:32.572 DEBUG 8960 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 19:24:32.618 DEBUG 8960 --- [XNIO-1 task-1] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 19:24:32.618 DEBUG 8960 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 19:24:32.661 DEBUG 8960 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 19:24:32.663 DEBUG 8960 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 19:24:32.677 DEBUG 8960 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 19:24:32.663(Timestamp)
+2020-11-02 19:24:32.679 DEBUG 8960 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 19:24:32.681 DEBUG 8960 --- [XNIO-1 task-1] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 19:24:32.687 DEBUG 8960 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 19:24:32.688 DEBUG 8960 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 19:24:32.690 DEBUG 8960 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 21:00:38.529  INFO 21552 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on MSI with PID 21552 (started by MSI-PC in E:\学之思\xzs-mysql\source\xzs)
+2020-11-02 21:00:38.532  INFO 21552 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-11-02 21:00:38.610  INFO 21552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-02 21:00:38.611  INFO 21552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-02 21:00:39.656  INFO 21552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-02 21:00:39.658  INFO 21552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-02 21:00:39.705  INFO 21552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 repository interfaces.
+2020-11-02 21:00:40.105  INFO 21552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$d9eb6428] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 21:00:40.121  INFO 21552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a753e7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 21:00:40.388  WARN 21552 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-02 21:00:40.405  INFO 21552 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-11-02 21:00:40.405  INFO 21552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1794 ms
+2020-11-02 21:00:41.588  INFO 21552 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15b96185, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ea0b79, org.springframework.security.web.header.HeaderWriterFilter@2ec6610a, org.springframework.web.filter.CorsFilter@5f0260b9, org.springframework.security.web.authentication.logout.LogoutFilter@60cca9a6, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@293ee008, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7a892b23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3558668a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ee06a2, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@257bc8da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dd390ba, org.springframework.security.web.session.SessionManagementFilter@7b722e66, org.springframework.security.web.access.ExceptionTranslationFilter@542c8ae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@437dcd06]
+2020-11-02 21:00:42.064  INFO 21552 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-11-02 21:00:42.065  INFO 21552 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-11-02 21:00:43.711  INFO 21552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 21:00:44.325  INFO 21552 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-11-02 21:00:44.347  INFO 21552 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2020-11-02 21:00:44.357  INFO 21552 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-11-02 21:00:44.413  INFO 21552 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 80 (http) with context path ''
+2020-11-02 21:00:44.418  INFO 21552 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 6.569 seconds (JVM running for 8.161)
+2020-11-02 21:18:30.185  INFO 21476 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on MSI with PID 21476 (started by MSI-PC in E:\学之思\xzs-mysql\source\xzs)
+2020-11-02 21:18:30.187  INFO 21476 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-11-02 21:18:30.238  INFO 21476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-02 21:18:30.238  INFO 21476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-02 21:18:31.243  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-02 21:18:31.245  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-02 21:18:31.297  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 0 repository interfaces.
+2020-11-02 21:18:31.684  INFO 21476 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$a9d11317] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 21:18:31.692  INFO 21476 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d08d02d6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 21:18:31.972  WARN 21476 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-02 21:18:31.991  INFO 21476 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-11-02 21:18:31.992  INFO 21476 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1754 ms
+2020-11-02 21:18:33.193  INFO 21476 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25aad9cf, org.springframework.security.web.context.SecurityContextPersistenceFilter@ca1fb56, org.springframework.security.web.header.HeaderWriterFilter@7ce90655, org.springframework.web.filter.CorsFilter@7e064824, org.springframework.security.web.authentication.logout.LogoutFilter@261afcb1, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@6877bd12, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@503cf37c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c62b4d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ac1c98e, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@40ac5a97, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b5373a8, org.springframework.security.web.session.SessionManagementFilter@1b5f1f3a, org.springframework.security.web.access.ExceptionTranslationFilter@71c1afd0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5581ce64]
+2020-11-02 21:18:33.689  INFO 21476 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-11-02 21:18:33.690  INFO 21476 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-11-02 21:18:35.215  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 21:18:35.832  INFO 21476 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-11-02 21:18:35.855  INFO 21476 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2020-11-02 21:18:35.865  INFO 21476 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-11-02 21:18:35.918  INFO 21476 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 80 (http) with context path ''
+2020-11-02 21:18:35.931  INFO 21476 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 6.32 seconds (JVM running for 8.012)
+2020-11-02 21:19:00.946  INFO 21476 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-02 21:19:00.947  INFO 21476 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-02 21:19:00.958  INFO 21476 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-11-02 21:19:01.132  INFO 21476 --- [XNIO-1 task-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-02 21:19:01.334  INFO 21476 --- [XNIO-1 task-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-02 21:19:01.344 DEBUG 21476 --- [XNIO-1 task-2] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 21:19:01.344 DEBUG 21476 --- [XNIO-1 task-1] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 21:19:01.366 DEBUG 21476 --- [XNIO-1 task-2] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 21:19:01.366 DEBUG 21476 --- [XNIO-1 task-1] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 21:19:01.390 DEBUG 21476 --- [XNIO-1 task-1] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 21:19:01.393 DEBUG 21476 --- [XNIO-1 task-1] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 21:19:01.393 DEBUG 21476 --- [XNIO-1 task-2] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 21:19:01.394 DEBUG 21476 --- [XNIO-1 task-1] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 21:19:01.392(Timestamp)
+2020-11-02 21:19:01.395 DEBUG 21476 --- [XNIO-1 task-1] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 21:19:01.398 DEBUG 21476 --- [XNIO-1 task-2] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 21:19:01.398 DEBUG 21476 --- [XNIO-1 task-2] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 21:19:01.402 DEBUG 21476 --- [XNIO-1 task-2] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 21:22:48.683  INFO 12608 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on MSI with PID 12608 (started by MSI-PC in E:\学之思\xzs-mysql\source\xzs)
+2020-11-02 21:22:48.686  INFO 12608 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-11-02 21:22:48.745  INFO 12608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-02 21:22:48.746  INFO 12608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-02 21:22:49.797  INFO 12608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-02 21:22:49.799  INFO 12608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-02 21:22:49.850  INFO 12608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 0 repository interfaces.
+2020-11-02 21:22:50.238  INFO 12608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$70d38973] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 21:22:50.248  INFO 12608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$978f7932] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-02 21:22:50.509  WARN 12608 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-02 21:22:50.532  INFO 12608 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-11-02 21:22:50.532  INFO 12608 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1784 ms
+2020-11-02 21:22:51.762  INFO 12608 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9d97818, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b696d91, org.springframework.security.web.header.HeaderWriterFilter@135a1084, org.springframework.web.filter.CorsFilter@7bff9ee9, org.springframework.security.web.authentication.logout.LogoutFilter@297da49a, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@799648bd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1a0b87f3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30b59aee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@412dee1a, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@2a089190, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@346ca314, org.springframework.security.web.session.SessionManagementFilter@72ca7580, org.springframework.security.web.access.ExceptionTranslationFilter@41feaefb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65530b93]
+2020-11-02 21:22:52.255  INFO 12608 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-11-02 21:22:52.257  INFO 12608 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-11-02 21:22:53.803  INFO 12608 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 21:22:54.420  INFO 12608 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-11-02 21:22:54.444  INFO 12608 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2020-11-02 21:22:54.452  INFO 12608 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-11-02 21:22:54.507  INFO 12608 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 80 (http) with context path ''
+2020-11-02 21:22:54.512  INFO 12608 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 6.314 seconds (JVM running for 7.887)
+2020-11-02 21:25:05.623  INFO 12608 --- [XNIO-1 task-2] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-02 21:25:05.624  INFO 12608 --- [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-02 21:25:05.633  INFO 12608 --- [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-11-02 21:25:05.777  INFO 12608 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-02 21:25:05.980  INFO 12608 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-02 21:25:05.991 DEBUG 12608 --- [XNIO-1 task-1] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 21:25:05.991 DEBUG 12608 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 21:25:06.022 DEBUG 12608 --- [XNIO-1 task-1] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 21:25:06.022 DEBUG 12608 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 21:25:06.053 DEBUG 12608 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 21:25:06.053 DEBUG 12608 --- [XNIO-1 task-1] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 21:25:06.057 DEBUG 12608 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 21:25:06.058 DEBUG 12608 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 21:25:06.056(Timestamp)
+2020-11-02 21:25:06.059 DEBUG 12608 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 21:25:06.060 DEBUG 12608 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 21:25:06.060 DEBUG 12608 --- [XNIO-1 task-2] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 21:25:06.061 DEBUG 12608 --- [XNIO-1 task-1] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 21:25:32.985 DEBUG 12608 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.selectByWxOpenId    : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and wx_open_id = ? limit 1 
+2020-11-02 21:25:32.985 DEBUG 12608 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.selectByWxOpenId    : ==> Parameters: o09fF5PVzrAItH0CbVz3lkLvAVzo(String)
+2020-11-02 21:25:32.987 DEBUG 12608 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.selectByWxOpenId    : <==      Total: 1
+2020-11-02 21:25:33.027 DEBUG 12608 --- [XNIO-1 task-5] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==>  Preparing: update t_user SET user_uuid = ?, user_name = ?, password = ?, real_name = ?, age = ?, sex = ?, birth_day = ?, user_level = ?, phone = ?, role = ?, status = ?, image_path = ?, create_time = ?, modify_time = ?, deleted = ?, wx_open_id = ? where id = ? 
+2020-11-02 21:25:33.030 DEBUG 12608 --- [XNIO-1 task-5] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==> Parameters: d2d29da2-dcb3-4013-b874-727626236f47(String), student(String), D1AGFL+Gx37t0NPG4d6biYP5Z31cNbwhK5w1lUeiHB2zagqbk8efYfSjYoh1Z/j1dkiRjHU+b0EpwzCh8IGsksJjzD65ci5LsnodQVf4Uj6D3pwoscXGqmkjjpzvSJbx42swwNTA+QoDU8YLo7JhtbUK2X0qCjFGpd+8eJ5BGvk=(String), 学生(String), 18(Integer), 1(Integer), 2019-09-01 16:00:00.0(Timestamp), 1(Integer), 158800882(String), 1(Integer), 1(Integer), http://image.alvisu.com/Fn4CyLHWvT-kxIrK1ZaqTDidvXzj(String), 2019-09-07 18:55:02.0(Timestamp), 2020-11-02 14:46:02.0(Timestamp), false(Boolean), o09fF5PVzrAItH0CbVz3lkLvAVzo(String), 1(Integer)
+2020-11-02 21:25:33.114 DEBUG 12608 --- [XNIO-1 task-5] r.c.m.x.r.U.updateByPrimaryKeySelective  : <==    Updates: 1
+2020-11-02 21:25:33.117 DEBUG 12608 --- [XNIO-1 task-5] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_token ( token, user_id, wx_open_id, create_time, end_time, user_name ) values ( ?, ?, ?, ?, ?, ? ) 
+2020-11-02 21:25:33.119 DEBUG 12608 --- [XNIO-1 task-5] r.c.m.x.r.U.insertSelective              : ==> Parameters: 014d6019-d918-4c35-968b-7ad166c36a4d(String), 1(Integer), o09fF5PVzrAItH0CbVz3lkLvAVzo(String), 2020-11-02 21:25:32.989(Timestamp), 2020-11-03 09:25:32.989(Timestamp), student(String)
+2020-11-02 21:25:33.174 DEBUG 12608 --- [XNIO-1 task-5] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-11-02 21:25:34.245 DEBUG 12608 --- [XNIO-1 task-6] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2020-11-02 21:25:34.245 DEBUG 12608 --- [XNIO-1 task-6] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2020-11-02 21:25:34.247 DEBUG 12608 --- [XNIO-1 task-6] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2020-11-02 21:25:34.254 DEBUG 12608 --- [XNIO-1 task-7] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2020-11-02 21:25:34.254 DEBUG 12608 --- [XNIO-1 task-7] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2020-11-02 21:25:34.256 DEBUG 12608 --- [XNIO-1 task-7] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2020-11-02 21:25:34.289 DEBUG 12608 --- [XNIO-1 task-7] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-11-02 21:25:34.289 DEBUG 12608 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-11-02 21:25:34.290 DEBUG 12608 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 21:25:34.290 DEBUG 12608 --- [XNIO-1 task-7] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2020-11-02 21:25:34.291 DEBUG 12608 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 2
+2020-11-02 21:25:34.291 DEBUG 12608 --- [XNIO-1 task-7] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 3
+2020-11-02 21:25:34.292 DEBUG 12608 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-11-02 21:25:34.292 DEBUG 12608 --- [XNIO-1 task-7] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? , ? , ? ) 
+2020-11-02 21:25:34.292 DEBUG 12608 --- [XNIO-1 task-7] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2020-11-02 21:25:34.293 DEBUG 12608 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2020-11-02 21:25:34.291(Timestamp)
+2020-11-02 21:25:34.293 DEBUG 12608 --- [XNIO-1 task-7] r.c.m.x.r.T.selectByTUid                 : <==      Total: 3
+2020-11-02 21:25:34.293 DEBUG 12608 --- [XNIO-1 task-6] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-11-02 21:25:39.432 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id from t_exam_paper_answer where id = ? 
+2020-11-02 21:25:39.432 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 10(Integer)
+2020-11-02 21:25:39.472 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 21:25:39.473 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2020-11-02 21:25:39.473 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 7(Integer)
+2020-11-02 21:25:39.483 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 21:25:39.487 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-11-02 21:25:39.488 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 14(Integer)
+2020-11-02 21:25:39.491 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 21:25:39.498 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? ) 
+2020-11-02 21:25:39.499 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 2(Integer)
+2020-11-02 21:25:39.500 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 1
+2020-11-02 21:25:39.513 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id from t_exam_paper_answer where id = ? 
+2020-11-02 21:25:39.514 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 10(Integer)
+2020-11-02 21:25:39.516 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 21:25:39.517 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectListByPaperAnswerId    : ==>  Preparing: select id, question_id, exam_paper_id, exam_paper_answer_id, question_type, subject_id, customer_score, question_score, question_text_content_id, answer, text_content_id, do_right, create_user, create_time, item_order from t_exam_paper_question_customer_answer where exam_paper_answer_id = ? order by item_order 
+2020-11-02 21:25:39.517 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectListByPaperAnswerId    : ==> Parameters: 10(Integer)
+2020-11-02 21:25:39.520 DEBUG 12608 --- [XNIO-1 task-8] r.c.m.x.r.E.selectListByPaperAnswerId    : <==      Total: 1
+2020-11-02 21:25:43.795 DEBUG 12608 --- [XNIO-1 task-9] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND grade_level = ? AND paper_type = ? 
+2020-11-02 21:25:43.795 DEBUG 12608 --- [XNIO-1 task-9] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2020-11-02 21:25:43.811 DEBUG 12608 --- [XNIO-1 task-9] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2020-11-02 21:25:43.815 DEBUG 12608 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.studentPage    : ==>  Preparing: SELECT id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id FROM t_exam_paper WHERE deleted = 0 AND grade_level = ? AND paper_type = ? order by id desc LIMIT ? 
+2020-11-02 21:25:43.816 DEBUG 12608 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.studentPage    : ==> Parameters: 1(Integer), 1(Integer), 10(Integer)
+2020-11-02 21:25:43.818 DEBUG 12608 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.studentPage    : <==      Total: 2
+2020-11-02 21:25:43.823 DEBUG 12608 --- [XNIO-1 task-9] r.c.m.x.r.S.selectByPrimaryKey           : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where id = ? 
+2020-11-02 21:25:43.824 DEBUG 12608 --- [XNIO-1 task-9] r.c.m.x.r.S.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2020-11-02 21:25:43.887 DEBUG 12608 --- [XNIO-1 task-9] r.c.m.x.r.S.selectByPrimaryKey           : <==      Total: 1
+2020-11-02 21:25:47.171 DEBUG 12608 --- [XNIO-1 task-10] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_answer WHERE create_user = ? 
+2020-11-02 21:25:47.171 DEBUG 12608 --- [XNIO-1 task-10] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2020-11-02 21:25:47.172 DEBUG 12608 --- [XNIO-1 task-10] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2020-11-02 21:25:47.173 DEBUG 12608 --- [XNIO-1 task-10] r.c.m.x.r.E.studentPage                  : ==>  Preparing: SELECT id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id FROM t_exam_paper_answer WHERE create_user = ? order by id desc LIMIT ? 
+2020-11-02 21:25:47.173 DEBUG 12608 --- [XNIO-1 task-10] r.c.m.x.r.E.studentPage                  : ==> Parameters: 1(Integer), 10(Integer)
+2020-11-02 21:25:47.176 DEBUG 12608 --- [XNIO-1 task-10] r.c.m.x.r.E.studentPage                  : <==      Total: 10
